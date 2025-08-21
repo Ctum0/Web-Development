@@ -28,11 +28,11 @@ console.log(students3); // Convert the JSON string back to an object
 
 /* Create a car object, brand model and year.
 convert it to JSON String parse it back and log the brand */
-let car = {
-    "brand": "Toyota",
-    "model": "Corolla",
-    "year": 2021
-};
+// let car = {
+//     "brand": "Toyota",
+//     "model": "Corolla",
+//     "year": 2021
+// };
 let carJson = JSON.stringify(car); // Convert car object to JSON string
 let carObject = JSON.parse(carJson); // Parse the JSON string back to an object
 console.log(carObject.brand); // Log the brand of the car object
