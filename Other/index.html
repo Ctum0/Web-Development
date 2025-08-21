@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My First Webpage</title>
+    </head>
+    <!--Internal CSS-->
+    <style>
+        .row{
+            display: flex;
+            gap: 10px;
+            justify-content: space-around;
+            flex-direction: row;
+            align-items: center;
+            
+        }
+    
+        .card{
+            display: flex;
+            background: lightblue;
+            padding: 50px;
+            width: 100px;
+            text-align:center;
+            flex-direction: column;
+  
+        }
+    </style>
+    <body>
+        <div class="row">
+            <div class="card">
+                <h3>Coffee</h3>
+                <img src="coffee.jpg" height="70px">
+                <p>Rs.250</p>
+                <a href="">
+                    <button>
+                        Order
+                    </button>
+                </a>
+            </div>
+            <div class="card">
+                <h3>Tea</h3>
+                <img src="tea.jpg" height="70px">
+                <p>Rs.300</p>
+                <a href="">
+                    <button>
+                        Order
+                    </button>
+                </a>
+            </div>
+            <div class="card">
+                <h3>Iced Tea</h3>
+                <img src="icedtea.jpg" height="70px">
+                <p>Rs.400</p>
+                <a href="">
+                    <button>
+                        Order
+                    </button>
+                </a>
+            </div>
+            
+            
+        </div>
+    </body>
+</html>

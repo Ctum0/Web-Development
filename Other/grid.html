@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template </title>
+</head>
+<style>
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        grid-template-rows: repeat(auto,auto);
+        gap: 10px;
+        
+
+    }
+    .box{
+        background: lightseagreen;
+        padding: 40px;
+        text-align: center;
+        font-size: 24px;
+        border: 1px solid lightskyblue;
+        border-radius: 20px;
+        box-shadow: 1px 4px 15px lightskyblue;
+        /*transition: property duration timing;*/
+        transition: all 0.5s ease-in-out;
+
+    }
+    .box:hover
+    {
+        background-color: whitesmoke;
+        color: black;
+        
+    }
+    #box1:hover{
+        transform: scale(1);
+
+    }
+    #box2:hover{
+        transform: scale(1.1);
+
+    }
+    #box3:hover{
+        transform: scale(1.2);
+
+    }
+</style>
+<body>
+    <div class="grid" id="box1">
+        <div class="box">
+            <h3>LOW</h3>
+            <p>Rs.100</p>
+        </div>
+        <div class="box" id="box2">
+            <h3>BASIC</h3>
+            <p>Rs.200</p>
+        </div>
+        <div class="box" id="box3">
+            <h3>PREMIUM</h3>
+            <p>Rs.300</p>
+        </div>
+    </div>
+</body>
+</html>

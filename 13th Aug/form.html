@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form onsubmit = "checkForm()" action = "" id="form1"> <!-- Action attribute can be set to a server endpoint if needed -->
+        <label for="name">Name</label>  <!-- Label for the name input -->
+        <input type = "text" id = "name"><!-- Input field for name -->
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" min="1" max="100">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+        <br>
+        <label for="Male">Male</label>
+        <input id="RD" type="radio" value="Male" name="Male">
+        <label for="Female">Female</label>
+        <input id="RD" type="radio" value="Female" name="Male"> <!-- We can see the values in radiobuttons and checkboxes in JS-->
+        <br>
+        <label for="Hobbies">Have Any Hobbies?</label> 
+        <input id="Hobbies" type="checkbox">
+        <br>
+        <button type="submit">Sign Up</button>
+    </form>
+    <button type="button" onclick="Hello()">Click Me</button> <!-- Button to trigger Hello function -->
+
+    <script>
+        function checkForm(){
+            let name = document.getElementById("name").value; // Gets the value of the name input field
+            let email = document.getElementById("age").value; // Gets the value of the age input field
+            console.log(name); // Logs the name to the console
+            console.log(email); // Logs the age to the console
+            event.preventDefault(); 
+        }
+
+        function Hello(){
+            console.log("Hello World");
+        }
+    </script>
+    
+
+
+
+</body> 
+</html>

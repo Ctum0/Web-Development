@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile Card</title>
+</head>
+<body>
+
+<div id="card" style="width:220px;padding:15px;border:1px solid #ccc;border-radius:8px;transition:0.3s;">
+  <div id="fav" style="float:right;cursor:pointer;">★</div>
+  
+  <input id="name" placeholder="Name"><br>
+  <small id="nameHint" style="display:none;">At least 2 letters</small>
+  <div id="nameError" style="color:red;display:none;">Invalid name</div>
+  
+  <input id="email" placeholder="Email"><br>
+  <small id="emailHint" style="display:none;">Enter a valid email</small>
+  <div id="emailError" style="color:red;display:none;">Invalid email</div>
+  
+  <input id="age" type="number" placeholder="Age"><br>
+  <small id="ageHint" style="display:none;">18–100 only</small>
+  <div id="ageError" style="color:red;display:none;">Invalid age</div>
+</div>
+
+<script>
+  let card=document.getElementById("card")
+  let fav=document.getElementById("fav")
+
+  card.onmouseover=()=>card.style.boxShadow="0 0 10px gray"
+  card.onmouseout=()=>card.style.boxShadow="none"
+  fav.ondblclick=()=>fav.style.color=fav.style.color=="gold"?"gray":"gold"
+
+  function setup(id,check){
+    let input=document.getElementById(id)
+    let hint=document.getElementById(id+"Hint")
+    let error=document.getElementById(id+"Error")
+    input.onfocus=()=>{hint.style.display="block";error.style.display="none";input.style.background="#eef"}
+    input.onblur=()=>{
+      hint.style.display="none";input.style.background="white"
+      if(!check(input.value.trim()))error.style.display="block"
+    }
+  }
+
+  setup("name",v=>v.length>=2)
+  setup("email",v=>/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v))
+  setup("age",v=>v>=18&&v<=100)
+</script>
+
+</body>
+</html>
